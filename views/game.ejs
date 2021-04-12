@@ -1,0 +1,32 @@
+<% extend('base') %>
+
+<div id="startTable">
+  <h1>Welcome adventureres!</h1>
+  <h2>What is your name?</h2>
+  <input id="playername" type="text" title="Enter an username with an min length of 3 and max 32" placeholder="username" minlength="3" maxlength="32" required />
+  <br>
+  <button onclick="startGame()">Start</button>
+</div>
+
+<div class="cover-page">
+
+  <div id="imageTable"></div>   <!-- This shows an image relevant to the qeust -->
+
+  <div id="qoustionTable">
+    <table id="tab-quest" style='width:100%'>
+      <p id="the-qoustion">     <!-- This will display the qoustion for the user --></p>
+      <tr>
+        <h3>Qeust progress</h3>
+        <hr>
+      </tr>
+    </table>
+  </div>
+
+  <div id="infoTable"></div>      <!-- Displaying players stats -->
+  <div id="inventoryTable"></div> <!-- Players inventory -->
+
+  <span onclick="toggleOption()" id="btnToggleOptions">▼</span>
+  <div id="optionBar">
+  </div>
+
+</div>

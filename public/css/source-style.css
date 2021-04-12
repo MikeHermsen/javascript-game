@@ -1,0 +1,234 @@
+:root { /*- Variables -*/
+    --brand-fg        : #A9A601;  /* Citron */
+    --brand-bg        : #01B3BF;  /* Maximum Blue Green */
+    --brand-color     : #040404;  /* Rich Black FOGRA 39 */
+    --brand-color-dark: #6E6E6E;  /* Dim Gray */
+
+    /*- The page white space between the content and the edges -*/
+    --page-width       : 70%;
+    --page-white-space : 15%;
+    /*! 100 - page-width = --page-white-space !*/
+}
+
+/*- Importing the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* { /*- ALL OBJECT -*/
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    color: var(--brand-fg);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--brand-color);
+}
+
+/* ^ SETTINGS FOR CSS ^ */
+
+#startTable {
+  position: fixed;
+  width: 60vw;
+  height: 60vh;
+  margin: 20vh 20vw;
+  background-color: var(--brand-color);
+  z-index: 999;
+  border-radius: 50px;
+  text-align: center;
+  border: 2px solid var(--brand-bg);
+}
+
+#startTable h1 {
+  padding: 10px;
+}
+
+#startTable input {
+  background-color: var(--brand-color);
+  color: var(--brand-fg);
+  text-align: center;
+  border: none;
+  width: 60%;
+  border-bottom: 2px solid var(--brand-bg);
+  font-size: 20px;
+  margin: 20px;
+}
+
+#startTable button {
+  background-color: var(--brand-color);
+  border: 2px solid var(--brand-bg);
+  color: var(--brand-fg);
+  padding: 5px 40px;
+  border-radius: 20px;
+  font-weight: 800;
+}
+
+#startTable button:hover {
+  background-color: var(--brand-bg);
+  color: var(--brand-color);
+}
+
+.page-cover {
+    width: var(--page-width);
+    height: 100vh;
+    padding-left: var(--page-white-space);
+}
+
+#optionBar {
+    position: fixed;
+    background-color: var(--brand-bg);
+    bottom: 0;
+    transition: all 0.2s;
+    padding: 1.5vh 0;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+.option-btn {
+  margin: 2px 1%;
+  border: 2px solid var(--brand-fg);
+  border-radius: 10px;
+  color: var(--brand-fg);
+  background-color: var(--brand-color);
+  transition: all 0.2s;
+  height: 48%;
+  width: 44%;
+}
+
+.option-btn:hover {
+  background-color: var(--brand-fg);
+  color: var(--brand-color);
+  transform: scale(1.05);
+}
+
+
+#btnToggleOptions {
+  transition: top 0.2s;
+  position: fixed;
+  bottom: 31vh;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: var(--brand-fg);
+  text-shadow: -1px -1px 0 var(--brand-color), 1px -1px 0 var(--brand-color), -1px 1px 0 var(--brand-color), 1px 1px 0 var(--brand-color);
+  font-size: 28px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+#btnToggleOptions:hover {
+  color: var(--brand-bg);
+}
+
+#imageTable {
+  position: fixed;
+  border: 2px solid var(--brand-bg);
+  height: 40vh;
+  width: 40vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#qoustionTable {
+  overflow-y: scroll;
+  position: fixed;
+  border: 2px solid var(--brand-bg);
+  height: 26vh;
+  top: 40vh;
+  transition: height 0.2s;
+
+  width: 40vw;
+}
+
+hr {
+  color: var(--brand-fg);
+  width: 90%;
+  margin: 5px 5%;
+}
+
+#qeust-cross:before {
+  content: "❌";
+}
+
+#qeust-check:before {
+  content: "✓";
+  color: green;
+  font-size: 22px;
+}
+
+#qoustionTable h3 {
+  text-align: center;
+}
+
+#the-qoustion {
+  text-align: center;
+  width: 100%;
+  padding: 5px 0;
+  color: var(--brand-bg);
+}
+
+#infoTable {
+  position: fixed;
+  border: 2px solid var(--brand-bg);
+  height: 40vh;
+  width: 60vw;
+  left: 40vw;
+  overflow-y: scroll;
+}
+
+#infoTable tr, #infoTable td {
+  text-align: left;
+  width: 50%;
+  padding: 5px;
+  background-color: var(--brand-color);
+}
+
+#infoTable h3 {
+  text-align: center;
+  padding: 5px 0;
+}
+
+#infoTable table {
+  background-color: var(--brand-bg);
+}
+
+#inventoryTable {
+  position: fixed;
+  border: 2px solid var(--brand-bg);
+  top: 40vh;
+  height: 26vh;
+  width: 60vw;
+  left: 40vw;
+  transition: height 0.2s;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  overflow-y: scroll;
+}
+
+#inventoryTable .item-card {
+  width: 96%;
+  margin: 2%;
+  height: 100px;
+  text-shadow: -1px -1px 0 var(--brand-color), 1px -1px 0 var(--brand-color), -1px 1px 0 var(--brand-color), 1px 1px 0 var(--brand-color);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: height 0.2s;
+  color: var(--brand-fg);
+  border: 2px solid var(--brand-fg);
+  background-color: var(--brand-color-dark);
+  border-radius: 20px;
+}
+
+#inventoryTable .item-card p {
+  margin: 5px;
+}
+
+#placeholder {
+  color: Red;
+  text-align: center;
+}
